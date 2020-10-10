@@ -5,22 +5,34 @@
         <b-form-input type="text" class="searchInput" v-model="filter" placeholder="Search movie..."></b-form-input>
       </b-col>
     </div>
-    <b-table borderless striped hover :items="filteredMovies" :fields="fields" class="my-5">
+    <b-table
+      borderless
+      striped
+      id="table-transition-example"
+      hover
+      sort-icon-right
+      :items="filteredMovies"
+      :fields="fields"
+      class="my-5"
+      primary-key="title"
+      :tbody-transition-props="transProps"
+    >
       <template v-slot:cell(more)="data">
         <b-modal
           :id="`modal-${data.item.id}`"
           centered
           :title="data.item.title"
           ok-only
+          ok-variant="secondary"
           header-bg-variant="primary"
           header-text-variant="secondary"
           body-bg-variant="dark"
           body-text-variant="secondary"
+          footer-bg-variant="primary"
           footer-text-variant="secondary"
-          footer-class="my-footer"
         >
-          <p class="my-4"><small class="small">artist:</small> {{ data.item.artist }}</p>
-          <p class="my-4"><small class="small">release date:</small> {{ data.item.released }}</p>
+          <p class="my-4">{{ data.item.artist }}<small class="small">director</small></p>
+          <p class="my-4">{{ data.item.released }}<small class="small">release date</small></p>
         </b-modal>
         <b-button @click="$bvModal.show(`modal-${data.item.id}`)" variant="primary" class="gold-font">
           More...
@@ -39,6 +51,9 @@ export default {
   name: 'Home',
   data() {
     return {
+      transProps: {
+        name: 'fade-list'
+      },
       filter: null,
       topmovies: [],
       fields: [

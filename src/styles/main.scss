@@ -1,10 +1,7 @@
 // Your variable overrides
-$body-bg: #000;
-$body-color: #111;
 $primary: #4d1e60;
 $secondary: #dbd0ad;
 $border-color: $primary;
-$navbar-dark-color: #aea076;
 $dark: #1b191b;
 
 // Required
@@ -35,21 +32,24 @@ body {
   background-size: 100vw 555vh;
   background-attachment: fixed;
 }
+
 .main {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.modal {
-  .my-footer {
-    background-color: #030002 !important;
-  }
+
+.goldnavbar {
+  background-color: #dcda9736 !important;
 }
+
 .route-enter-active {
   animation: bounce-in 0.5s;
 }
+
 .route-leave-active {
   animation: bounce-in 0.5s reverse;
 }
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);

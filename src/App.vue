@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <b-navbar type="dark" variant="primary" class="py-3">
+      <b-navbar type="dark" variant="primary" class="py-3 goldnavbar">
         <div class="container">
           <b-navbar-nav>
             <b-nav-item href="/">Home</b-nav-item>
