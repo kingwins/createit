@@ -1,0 +1,24 @@
+table {
+    background: #ffffffbd;
+    color: #25073c;
+  
+    &::v-deep .title-col {
+      width: 70%;
+    }
+    &::v-deep .category-col {
+      width: 30%;
+    }
+    &::v-deep .more-col {
+      width: 50px;
+    }
+  }
+  .small {
+    display: block;
+  }
+  .gold-font {
+    color: #dedfc0;
+  
+    &:hover {
+      color: #ffffff;
+    }
+  }

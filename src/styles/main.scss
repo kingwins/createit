@@ -1,0 +1,63 @@
+// Your variable overrides
+$body-bg: #000;
+$body-color: #111;
+$primary: #4d1e60;
+$secondary: #dbd0ad;
+$border-color: $primary;
+$navbar-dark-color: #aea076;
+$dark: #1b191b;
+
+// Required
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// Optional
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/tables';
+@import '../../node_modules/bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/card';
+@import '../../node_modules/bootstrap/scss/close';
+@import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/utilities';
+
+// BootstrapVue and its default variables
+@import '../../node_modules/bootstrap-vue/src/index.scss';
+
+body {
+  background: radial-gradient(circle, #380220cf 0%, #ff009980 55%, #0c0c0c 100%);
+  padding-bottom: 60px;
+  background-size: 100vw 555vh;
+  background-attachment: fixed;
+}
+.main {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.modal {
+  .my-footer {
+    background-color: #030002 !important;
+  }
+}
+.route-enter-active {
+  animation: bounce-in 0.5s;
+}
+.route-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
